@@ -1,14 +1,11 @@
 import React from "react"
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { CookieBanner } from "@/components/layout/cookie-banner";
 import { siteConfig } from "@/lib/config";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -43,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={`font-sans antialiased ${inter.className}`}>
+      <body className="font-sans antialiased">
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
